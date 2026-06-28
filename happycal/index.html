@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyCal - AI Calorie Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HappyCal</h1>
+            <p>AI-Powered Calorie Counter</p>
+        </header>
+
+        <main>
+            <section class="camera-section">
+                <div class="camera-container">
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas"></canvas>
+                </div>
+                <button id="capture-btn" class="capture-btn">Capture Image</button>
+            </section>
+
+            <section class="results-section">
+                <div class="loading" id="loading">
+                    <p>Analyzing your food...</p>
+                </div>
+                <div class="results" id="results" style="display: none;">
+                    <h2>Food Analysis Results</h2>
+                    <div class="food-info">
+                        <img id="food-image" src="" alt="Food item">
+                        <div class="nutrition-info">
+                            <h3 id="food-name">Unknown Food</h3>
+                            <p><strong>Calories:</strong> <span id="calories">0</span></p>
+                            <p><strong>Protein:</strong> <span id="protein">0g</span></p>
+                            <p><strong>Carbs:</strong> <span id="carbs">0g</span></p>
+                            <p><strong>Fat:</strong> <span id="fat">0g</span></p>
+                        </div>
+                    </div>
+                    <button id="new-capture" class="new-capture-btn">Scan Another Item</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by AI Technology | HappyCal v1.0</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
