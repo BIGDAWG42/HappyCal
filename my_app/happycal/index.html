@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyCal - Calorie Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HappyCal</h1>
+            <p>Nutrition Scanner</p>
+        </header>
+
+        <main>
+            <div class="camera-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+                <button id="captureBtn" class="capture-btn">📸 Capture</button>
+            </div>
+
+            <div class="result-container">
+                <div id="result" class="result">
+                    <p>Scan a food item to get nutritional information</p>
+                </div>
+                <div id="history" class="history">
+                    <h3>Recent Scans</h3>
+                    <div id="historyList"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>HappyCal &copy; 2023 | AI Nutrition Assistant</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
