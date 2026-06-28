@@ -1,0 +1,13 @@
+{
+  "name": "happycal",
+  "version": "1.0.0",
+  "description": "Calorie scanning web application",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py",
+    "dev": "python app.py"
+  },
+  "dependencies": {
+    "flask": "^2.0.1"
+  }
+}

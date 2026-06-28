@@ -3,44 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HappyCal - AI Calorie Scanner</title>
+    <title>HappyCal - Calorie Scanner</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>HappyCal</h1>
-            <p>AI-Powered Calorie Scanner</p>
+            <p>Nutrition Scanner</p>
         </header>
 
         <main>
-            <div class="scanner-container">
-                <div class="camera-preview" id="cameraPreview">
-                    <video id="video" autoplay playsinline></video>
-                    <canvas id="canvas" class="hidden"></canvas>
-                </div>
-                
-                <div class="controls">
-                    <button id="startCamera" class="btn primary">Start Camera</button>
-                    <button id="captureBtn" class="btn secondary" disabled>Capture Photo</button>
-                    <button id="scanBtn" class="btn accent hidden" disabled>Scan Calories</button>
-                </div>
-                
-                <div class="result-container hidden" id="resultContainer">
-                    <h2>Scanned Results</h2>
-                    <div id="results" class="results-content"></div>
-                </div>
+            <div class="camera-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+                <button id="captureBtn" class="capture-btn">📸 Capture</button>
             </div>
-            
-            <div class="history-container">
-                <h2>Recent Scans</h2>
-                <div id="historyList" class="history-list"></div>
+
+            <div class="result-container">
+                <div id="result" class="result">
+                    <p>Scan a food item to get nutritional information</p>
+                </div>
+                <div id="history" class="history">
+                    <h3>Recent Scans</h3>
+                    <div id="historyList"></div>
+                </div>
             </div>
         </main>
 
         <footer>
-            <p>Powered by AI Nutrition Analysis</p>
+            <p>HappyCal &copy; 2023 | AI Nutrition Assistant</p>
         </footer>
     </div>
 
