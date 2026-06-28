@@ -1,33 +1,10 @@
-from flask import Flask, render_template, jsonify
-import json
-import os
+from flask import Flask, send_from_directory
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='happyCal/build', static_url_path='')
 
 @app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/api/history')
-def get_history():
-    history_file = 'history.json'
-    if os.path.exists(history_file):
-        with open(history_file, 'r') as f:
-            return jsonify(json.load(f))
-    return jsonify([])
-
-@app.route('/api/scan', methods=['POST'])
-def scan_food():
-    # In a real implementation, this would call an AI model
-    # For now, returning mock data
-    return jsonify({
-        "food": "Spaghetti Carbonara",
-        "calories": 450,
-        "protein": 15,
-        "carbs": 50,
-        "fat": 20,
-        "confidence": 95
-    })
+def serve():
+    return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
