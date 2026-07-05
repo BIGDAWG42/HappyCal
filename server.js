@@ -44,10 +44,18 @@ app.post('/api/analyze', async (req, res) => {
       }
     );
 
-    const data = await response.json();
+    const rawText = await response.text();
+    let data;
+    try {
+      data = JSON.parse(rawText);
+    } catch (parseErr) {
+      console.error(`Gemini returned non-JSON. HTTP status: ${response.status}. Body (first 300 chars): ${rawText.slice(0, 300)}`);
+      return res.status(502).json({ error: `Gemini API returned HTTP ${response.status} (non-JSON response). Check Render logs for the full body.` });
+    }
+
     if (!response.ok) {
-      console.error('Gemini API error:', data);
-      const reason = (data && data.error && data.error.message) || 'The AI service returned an error.';
+      console.error(`Gemini API error. HTTP status: ${response.status}.`, data);
+      const reason = (data && data.error && data.error.message) || `Gemini API returned HTTP ${response.status}.`;
       return res.status(502).json({ error: reason });
     }
 
