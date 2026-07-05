@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json({ limit: '15mb' })); // food photos are base64-encoded, so allow a larger body
 app.use(express.static(path.join(__dirname, 'public')));
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_API_KEY = (process.env.GEMINI_API_KEY || '').trim();
 const GEMINI_MODEL = 'gemini-3-flash-preview'; // free-tier vision-capable model as of mid-2026 — check https://ai.google.dev/gemini-api/docs/pricing if this ever errors as deprecated
 
 app.post('/api/analyze', async (req, res) => {
