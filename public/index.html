@@ -5,7 +5,7 @@
 <title>HappyCal</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
-
+ 
 :root{
   --bg:#101915;
   --panel:#182420;
@@ -38,12 +38,12 @@ body{
   overflow-x:hidden;
 }
 .wrap{max-width:460px;margin:0 auto;}
-
+ 
 @keyframes riseIn{
   from{opacity:0; transform:translateY(14px);}
   to{opacity:1; transform:translateY(0);}
 }
-
+ 
 /* ---- device shell ---- */
 .device{
   background:linear-gradient(180deg, var(--panel), var(--panel-2));
@@ -53,7 +53,7 @@ body{
   box-shadow:0 30px 60px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
   animation:riseIn .6s cubic-bezier(.2,.7,.3,1) both;
 }
-
+ 
 /* screen readout header */
 .screen{
   background:#0B120F;
@@ -88,9 +88,9 @@ body{
   animation:blink 1.8s ease-in-out infinite;
 }
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.35;}}
-
+ 
 .tagline{color:var(--muted);font-size:13px;margin:0 0 18px;padding-left:2px;}
-
+ 
 /* ---- platform (upload zone) ---- */
 .platform{
   position:relative;
@@ -139,7 +139,7 @@ body{
 .btn-secondary{background:rgba(255,255,255,0.06); color:var(--white); border:1px solid var(--hair);}
 .btn-secondary:hover{background:rgba(255,255,255,0.1);}
 input[type=file]{display:none;}
-
+ 
 @keyframes popIn{
   from{opacity:0; transform:scale(.9) rotate(-2deg);}
   to{opacity:1; transform:scale(1) rotate(-1.2deg);}
@@ -168,7 +168,7 @@ input[type=file]{display:none;}
   50%{top:88%;}
   100%{top:6%;}
 }
-
+ 
 /* ---- weighing state ---- */
 .weighing{
   display:none;
@@ -182,7 +182,7 @@ input[type=file]{display:none;}
   animation:riseIn .3s ease both;
 }
 .weighing.active{display:flex;}
-
+ 
 .error-box{
   display:none;
   margin-top:14px;
@@ -193,7 +193,7 @@ input[type=file]{display:none;}
   padding:11px 14px;
   border-radius:10px;
 }
-
+ 
 /* ---- results: LED readout + ring ---- */
 .result{
   display:none;
@@ -241,7 +241,7 @@ input[type=file]{display:none;}
   line-height:1;
 }
 .ring-cal-label{font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:var(--lime-dim);letter-spacing:.08em;margin-top:3px;}
-
+ 
 .readout-info{flex:1; min-width:0;}
 .r-food{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--white); margin-bottom:3px;}
 .r-portion{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--muted); margin-bottom:10px;}
@@ -250,9 +250,9 @@ input[type=file]{display:none;}
 .macro-dot{width:8px;height:8px;border-radius:50%; flex-shrink:0;}
 .macro-row .mlabel{color:var(--muted); width:44px;}
 .macro-row .mval{color:var(--white); font-weight:600;}
-
+ 
 .confidence{font-size:11px; color:var(--muted); margin-top:12px; font-style:italic; padding-left:2px;}
-
+ 
 /* ---- paper receipt strip (the physical output) ---- */
 @keyframes printOut{
   0%{opacity:0; transform:translateY(-16px) rotate(0deg); clip-path:inset(0 0 100% 0);}
@@ -283,10 +283,10 @@ input[type=file]{display:none;}
 .slip::after{bottom:-1px; transform:scaleY(-1);}
 .slip-row{display:flex; justify-content:space-between; padding:2px 0;}
 .slip-total{font-weight:700; border-top:1px dashed rgba(34,40,31,0.3); margin-top:6px; padding-top:6px;}
-
+ 
 .result-actions{display:flex; gap:10px; margin-top:14px;}
 .result-actions .btn{flex:1;}
-
+ 
 /* ---- daily total ---- */
 @keyframes bumpUp{
   0%{transform:scale(1);}
@@ -317,7 +317,7 @@ input[type=file]{display:none;}
 .daily-macros .p::before{color:var(--coral);}
 .daily-macros .c::before{color:var(--amber);}
 .daily-macros .f::before{color:var(--sky);}
-
+ 
 /* ---- log ---- */
 .log-title{font-family:'IBM Plex Mono',monospace; font-size:11px; margin:26px 0 10px 2px; color:var(--muted); text-transform:uppercase; letter-spacing:.1em;}
 @keyframes itemIn{
@@ -355,9 +355,9 @@ input[type=file]{display:none;}
 }
 .log-del:hover{color:var(--coral); transform:scale(1.2) rotate(90deg);}
 .empty-log{color:var(--muted);font-size:12.5px;text-align:center;padding:20px 0;animation:riseIn .3s ease both;}
-
+ 
 .disclaimer{font-size:11px;color:var(--muted);text-align:center;margin-top:24px;line-height:1.5;padding:0 12px;}
-
+ 
 /* ---- login screen ---- */
 .login-wrap{
   max-width:400px;
@@ -408,7 +408,7 @@ input[type=file]{display:none;}
   animation:blink 1.8s ease-in-out infinite;
 }
 .login-copy{color:var(--muted); font-size:13px; margin:0 0 24px; line-height:1.5;}
-
+ 
 .google-btn{
   width:100%;
   display:flex;
@@ -430,7 +430,7 @@ input[type=file]{display:none;}
 .google-btn:active{transform:scale(0.97);}
 .google-btn:disabled{opacity:.7; cursor:default; transform:none;}
 .google-btn svg{width:18px;height:18px;flex-shrink:0;}
-
+ 
 .login-divider{
   display:flex; align-items:center; gap:10px;
   margin:18px 0;
@@ -439,7 +439,7 @@ input[type=file]{display:none;}
 .login-divider::before, .login-divider::after{
   content:''; flex:1; height:1px; background:var(--hair);
 }
-
+ 
 .guest-btn{
   background:none;
   border:1px solid var(--hair);
@@ -454,7 +454,7 @@ input[type=file]{display:none;}
   transition:background .15s, color .15s;
 }
 .guest-btn:hover{background:rgba(255,255,255,0.06); color:var(--white);}
-
+ 
 .login-connecting{
   display:none;
   align-items:center;
@@ -467,7 +467,7 @@ input[type=file]{display:none;}
 }
 .login-connecting.active{display:flex;}
 .login-fine{font-size:10.5px; color:var(--muted); margin-top:22px; line-height:1.5;}
-
+ 
 .auth-input{
   width:100%;
   background:#0B120F;
@@ -501,7 +501,7 @@ input[type=file]{display:none;}
   text-align:left;
 }
 .auth-error.show{display:block;}
-
+ 
 .login-switch{
   margin-top:18px;
   font-size:12.5px;
@@ -520,7 +520,7 @@ input[type=file]{display:none;}
   text-decoration:underline;
 }
 .switch-link:hover{color:var(--white);}
-
+ 
 .logout-link{
   background:none;
   border:none;
@@ -534,17 +534,17 @@ input[type=file]{display:none;}
   text-decoration:underline;
 }
 .logout-link:hover{color:var(--lime);}
-
+ 
 #mainApp{display:none;}
 #mainApp.show{display:block; animation:riseIn .5s cubic-bezier(.2,.7,.3,1) both;}
 .login-wrap.hide{display:none;}
 </style>
 </head>
 <body>
-
+ 
 <div id="mainApp" class="show">
 <div class="wrap">
-
+ 
   <div class="device">
     <div class="screen">
       <div class="screen-brand">HAPPYCAL</div>
@@ -553,7 +553,7 @@ input[type=file]{display:none;}
       </div>
     </div>
     <p class="tagline">Set your plate down. It reads the rest.</p>
-
+ 
     <div class="platform" id="platform">
       <div class="platform-plate">
         <svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -579,7 +579,7 @@ input[type=file]{display:none;}
         <div class="error-box" id="errorBox"></div>
       </div>
     </div>
-
+ 
     <div class="result" id="result">
       <div class="readout">
         <div class="ring-wrap">
@@ -600,7 +600,7 @@ input[type=file]{display:none;}
           </div>
         </div>
       </div>
-
+ 
       <div class="slip">
         <div class="slip-row"><span id="sFood">—</span><span id="sPortion">—</span></div>
         <div class="slip-row"><span>PROTEIN</span><span id="sP">0g</span></div>
@@ -609,13 +609,13 @@ input[type=file]{display:none;}
         <div class="slip-row slip-total"><span>CALORIES</span><span id="sCal">0</span></div>
       </div>
       <div class="confidence" id="rConfidence"></div>
-
+ 
       <div class="result-actions">
         <button class="btn btn-secondary" id="discardBtn">Discard</button>
         <button class="btn btn-primary" id="logBtn">Add to log</button>
       </div>
     </div>
-
+ 
     <div class="daily" id="dailyBox" style="display:none;">
       <div>
         <div class="daily-label">TODAY</div>
@@ -628,14 +628,14 @@ input[type=file]{display:none;}
       </div>
     </div>
   </div>
-
+ 
   <div class="log-title">Log</div>
   <div id="logList"></div>
-
+ 
   <div class="disclaimer">Estimates from AI photo analysis — treat as a rough guide, not exact lab measurement.</div>
 </div>
 </div>
-
+ 
 <script>
 const platform = document.getElementById('platform');
 const cameraBtn = document.getElementById('cameraBtn');
@@ -652,18 +652,18 @@ const result = document.getElementById('result');
 const ring = document.getElementById('ring');
 const logList = document.getElementById('logList');
 const dailyBox = document.getElementById('dailyBox');
-
+ 
 let currentImageBase64 = null;
 let currentImageMedia = null;
 let currentResult = null;
-
+ 
 const STORAGE_KEY = 'happycal_entries';
-
+ 
 cameraBtn.onclick = () => cameraInput.click();
 uploadBtn.onclick = () => uploadInput.click();
 cameraInput.onchange = e => handleFile(e.target.files[0]);
 uploadInput.onchange = e => handleFile(e.target.files[0]);
-
+ 
 platform.ondragover = e => { e.preventDefault(); platform.classList.add('drag'); };
 platform.ondragleave = () => platform.classList.remove('drag');
 platform.ondrop = e => {
@@ -671,14 +671,14 @@ platform.ondrop = e => {
   platform.classList.remove('drag');
   if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
 };
-
+ 
 const weighWords = ['reading the plate…','estimating portions…','counting calories…','breaking down macros…'];
-
+ 
 function handleFile(file){
   if (!file || !file.type.startsWith('image/')) return;
   errorBox.style.display = 'none';
   result.classList.remove('show');
-
+ 
   const reader = new FileReader();
   reader.onload = async () => {
     const dataUrl = reader.result;
@@ -690,7 +690,7 @@ function handleFile(file){
   };
   reader.readAsDataURL(file);
 }
-
+ 
 async function analyze(){
   weighing.classList.add('active');
   scanLine.classList.add('active');
@@ -700,30 +700,30 @@ async function analyze(){
     wi = (wi + 1) % weighWords.length;
     weighingText.textContent = weighWords[wi];
   }, 1400);
-
+ 
   try {
     const response = await fetch('/api/analyze', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ imageBase64: currentImageBase64, mediaType: currentImageMedia })
     });
-
+ 
     const parsed = await response.json();
     if (!response.ok) {
       throw new Error(parsed.error || 'ANALYZE_FAILED');
     }
-
+ 
     if (!parsed.food_name || parsed.food_name === 'No food detected') {
       throw new Error('NO_FOOD');
     }
-
+ 
     currentResult = parsed;
     renderResult(parsed);
   } catch (err) {
     if (err.message === 'NO_FOOD') {
       showError("Couldn't spot food in that photo — try a clearer shot of the plate.");
     } else {
-      showError("Couldn't analyze that photo. Please try again.");
+      showError("Couldn't analyze that photo: " + (err.message || 'unknown error'));
     }
     console.error(err);
   } finally {
@@ -732,12 +732,12 @@ async function analyze(){
     scanLine.classList.remove('active');
   }
 }
-
+ 
 function showError(msg){
   errorBox.textContent = msg;
   errorBox.style.display = 'block';
 }
-
+ 
 function countUp(el, target, duration=700, suffix=''){
   const start = 0;
   const startTime = performance.now();
@@ -750,50 +750,50 @@ function countUp(el, target, duration=700, suffix=''){
   }
   requestAnimationFrame(tick);
 }
-
+ 
 function renderResult(r){
   document.getElementById('rFood').textContent = r.food_name;
   document.getElementById('rPortion').textContent = (r.portion_estimate || '').toUpperCase();
   document.getElementById('pVal').textContent = r.protein_g + 'g';
   document.getElementById('cVal').textContent = r.carbs_g + 'g';
   document.getElementById('fVal').textContent = r.fat_g + 'g';
-
+ 
   document.getElementById('sFood').textContent = r.food_name.toUpperCase();
   document.getElementById('sPortion').textContent = (r.portion_estimate || '').toUpperCase();
   document.getElementById('sP').textContent = r.protein_g + 'g';
   document.getElementById('sC').textContent = r.carbs_g + 'g';
   document.getElementById('sF').textContent = r.fat_g + 'g';
   document.getElementById('sCal').textContent = r.calories;
-
+ 
   let confText = 'Confidence: ' + (r.confidence || 'medium');
   if (r.note) confText += ' — ' + r.note;
   document.getElementById('rConfidence').textContent = confText;
-
+ 
   ring.style.background = 'conic-gradient(var(--hair) 0deg 360deg)';
-
+ 
   result.classList.remove('show');
   void result.offsetWidth;
   result.classList.add('show');
-
+ 
   const total = Math.max(r.protein_g + r.carbs_g + r.fat_g, 1);
   const pDeg = (r.protein_g/total)*360;
   const cDeg = pDeg + (r.carbs_g/total)*360;
-
+ 
   requestAnimationFrame(() => {
     setTimeout(() => {
       ring.style.background = `conic-gradient(var(--coral) 0deg ${pDeg}deg, var(--amber) ${pDeg}deg ${cDeg}deg, var(--sky) ${cDeg}deg 360deg)`;
     }, 150);
   });
-
+ 
   countUp(document.getElementById('rCal'), r.calories, 800);
 }
-
+ 
 document.getElementById('discardBtn').onclick = () => {
   result.classList.remove('show');
   previewWrap.style.display = 'none';
   currentResult = null;
 };
-
+ 
 function getEntries(){
   try {
     return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
@@ -804,7 +804,7 @@ function getEntries(){
 function saveEntries(entries){
   localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
 }
-
+ 
 document.getElementById('logBtn').onclick = () => {
   if (!currentResult) return;
   const entry = {
@@ -816,28 +816,28 @@ document.getElementById('logBtn').onclick = () => {
   const entries = getEntries();
   entries.push(entry);
   saveEntries(entries);
-
+ 
   result.classList.remove('show');
   previewWrap.style.display = 'none';
   currentResult = null;
   loadLog();
 };
-
+ 
 function isToday(ts){
   const d = new Date(ts), n = new Date();
   return d.getFullYear()===n.getFullYear() && d.getMonth()===n.getMonth() && d.getDate()===n.getDate();
 }
-
+ 
 function dominantMacroColor(e){
   const m = Math.max(e.protein_g, e.carbs_g, e.fat_g);
   if (m === e.protein_g) return 'var(--coral)';
   if (m === e.carbs_g) return 'var(--amber)';
   return 'var(--sky)';
 }
-
+ 
 function loadLog(){
   const entries = getEntries().sort((a,b) => b.ts - a.ts);
-
+ 
   logList.innerHTML = '';
   if (entries.length === 0) {
     logList.innerHTML = '<div class="empty-log">No entries yet — scan your first plate above.</div>';
@@ -868,7 +868,7 @@ function loadLog(){
       };
     });
   }
-
+ 
   const todays = entries.filter(e => isToday(e.ts));
   if (todays.length > 0) {
     const totCal = todays.reduce((s,e)=>s+e.calories,0);
@@ -896,14 +896,15 @@ function loadLog(){
     dailyBox.style.display = 'none';
   }
 }
-
+ 
 function escapeHtml(s){
   const d = document.createElement('div');
   d.textContent = s;
   return d.innerHTML;
 }
-
+ 
 loadLog();
 </script>
 </body>
 </html>
+ 
